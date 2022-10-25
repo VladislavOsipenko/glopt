@@ -31,4 +31,69 @@ $(document).ready(function(){
         }
         ]
     });
+
+    function togglSlide(item) {
+        $(item).each(function(i) {
+            $(this) .on('click',function(e) {
+                e.preventDefault();
+                $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+                $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+            })
+        })
+    }
+    
+    togglSlide('.catalog-item__link');
+    togglSlide('.catalog-item__back');
+    
+    //modal
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks').fadeOut('slow');
+    });
+    
+    
+    $('form').submit(function(e) {
+        e.preventDefault();
+    
+       
+    
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#consultation').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+    
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1000) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    $(document).ready(function() {
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 450, function(){
+              window.location.hash = hash;
+            });
+            } 
+        });
+    });
 }); 
+

@@ -8,24 +8,24 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <div class="promo_wrapper">
                 <div class="promo_logo"><img src="icons/logo.png" alt="logo"></div>
                 <ul class="promo_menu">
-                    <li class="promo_menu__item title title_fz15"><a href="#" class="menu_link">Преимущества</a></li>
-                    <li class="promo_menu__item title title_fz15"><a href="#" class="menu_link">Наша робота</a></li>
-                    <li class="promo_menu__item title title_fz15"><a href="#" class="menu_link">Цены</a></li>
-                    <li class="promo_menu__item title title_fz15"><a href="#" class="menu_link">Схема роботы</a></li>
-                    <li class="promo_menu__item title title_fz15"><a href="#" class="menu_link">Отзывы</a></li>
-                    <li class="promo_menu__item title title_fz15"><a href="#" class="menu_link">Контакты</a></li>
+                    <li class="promo_menu__item title title_fz15"><a href="#benefits" class="menu_link">Преимущества</a></li>
+                    <li class="promo_menu__item title title_fz15"><a href="#work" class="menu_link">Наша робота</a></li>
+                    <li class="promo_menu__item title title_fz15"><a href="#price" class="menu_link">Цены</a></li>
+                    <li class="promo_menu__item title title_fz15"><a href="#scheme" class="menu_link">Схема роботы</a></li>
+                    <li class="promo_menu__item title title_fz15"><a href="#reviews" class="menu_link">Отзывы</a></li>
+                    <li class="promo_menu__item title title_fz15"><a href="#questions" class="menu_link">Контакты</a></li>
                 </ul>
                 <div class="promo_numer">
                     <div class="promo_numer__coll">Есть вопросы?</div>
                     <a href="tel:+79264230100" class="promo_numer__phone">+7 (926) 423 01 00</a>
                 </div>
                 
-                <button class="promo_button1 button button_btn160">Перезвоните мне</button>
+                <button data-modal="consultation" class="promo_button1 button button_btn160">Перезвоните мне</button>
             </div>
             <div class="promo__title title_fz24">Global Opt - логистика полного цикла из Китая в Россию</div>
             <h1 class="promo_title title">ДОСТАВКА ГРУЗОВ ИЗ КИТАЯ</h1>
@@ -53,11 +53,11 @@
                     <div class="promo_info__text">Экспресс доставка 1-2 дня из Гуанчжоу в Москву от 25$/кг</div>
                 </div>
             </div>
-            <button class="promo_button button">Получить расчет</button>
+            <button data-modal="consultation" class="promo_button button">Получить расчет</button>
         </div>
     </section>
 
-    <section class="benefits">
+    <section id="benefits" class="benefits">
         <div class="container">
             <div class="benefits_title title title_fz26">
                 Преимущества работы с GlobalOpt
@@ -155,7 +155,7 @@
         </div>
     </section>
 
-    <section class="work">
+    <section id="work" class="work">
         <div class="container">
             <div class="work_title title title_fz26">
                 Наша работа - больше чем просто доставка
@@ -202,7 +202,7 @@
             </div>
         </div>
     </section>
-    <section class="agent">
+    <section id="agent" class="agent">
         <div class="agent_img">
             <img src="icons/agent.png" alt="agent">
         </div>
@@ -216,7 +216,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section id="price" class="price">
         <div class="container">
             <div class="price_title title title_fz26">
                 Цены на любой вариант доставки
@@ -313,8 +313,8 @@
                 </div>
                 
                 <form class="price-form" action="#">
-                    <input name="text" required placeholder="Ваше имя..." type="text">
-                    <input name="phone" required placeholder="Ваш телефон...">
+                    <input name="name" required placeholder="Ваше имя..." type="name">
+                    <input name="phone" required placeholder="Ваш телефон..." type="phone">
                     <input name="email" required placeholder="Ваш E-mail..." type="email">
 
                     <div class="price_forma__btn">
@@ -337,7 +337,7 @@
             </div>
         </div>
     </section>
-    <section class="scheme">
+    <section id="scheme" class="scheme">
         <div class="container">
             <div class="scheme_title title title_fz26">
                 Схема работы с нами
@@ -383,7 +383,7 @@
             </div>
         </div>
     </section>
-    <section class="reviews">
+    <section id="reviews" class="reviews">
         <div class="container">
             <div class="reviews_title title title_fz26">
                 отзывы наших клиентов
@@ -432,7 +432,7 @@
             </div>
         </div>
     </section>
-    <section class="questions">
+    <section id="questions" class="questions">
         <div class="container">
             <div class="questions_scoreboard">
                 <div class="questions_scoreboard__header">
@@ -446,12 +446,12 @@
                 <div class="questions_scoreboard__forma">
                     <form class="questions-form" action="#">
                         <div class="questions-form__input">
-                            <input name="text" required placeholder="Ваше имя..." type="text">
-                            <input name="phone" required placeholder="Ваш телефон...">
+                            <input name="name" required placeholder="Ваше имя..." type="name">
+                            <input name="phone" required placeholder="Ваш телефон..." type="phone">
                             <input name="email" required placeholder="Ваш E-mail..." type="email">
                         </div>
                         <div class="questions-form__textarea">
-                            <textarea name="text" required placeholder="Сообщение..."></textarea>
+                            <textarea name="text" required placeholder="Сообщение..." type="text"></textarea></textarea>
                         </div>
                         <div class="questions-form__btn">
                             <button class="questions-form__button button button_btn180">Отправить заявку</button> 
@@ -477,7 +477,7 @@
                         <a href="tel:+79264230100" class="footer_numer__phone">+7 (926) 423 01 00</a>
                     </div>
     
-                    <button class="footer_button button button_btn160">Перезвоните мне</button>
+                    <button data-modal="consultation" class="footer_button button button_btn160">Перезвоните мне</button>
                 </div>
             </div>
             <div class="footer_line"></div>
@@ -495,6 +495,35 @@
             </div>
         </div>
     </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+            <form class="modal-form" action="#">
+                <div class="modal-form__input">
+                    <input name="name" required placeholder="Ваше имя..." type="name">
+                    <input name="phone" required placeholder="Ваш телефон..." type="phone">
+                    <input name="email" required placeholder="Ваш E-mail..." type="email">
+                    <div class="modal-form__btn">
+                        <button class="modal-form__button button button_btn180">Отправить заявку</button> 
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </div>
+
+    <a class="pageup" href="#up">
+        <img src="icons/circle-chevron-up-solid (1).svg" alt="up">
+    </a>
 
 
     

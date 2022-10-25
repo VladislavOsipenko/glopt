@@ -3,6 +3,7 @@
 
 $name = $_POST['name'];
 $email = $_POST['email'];
+$phone = $_POST['phone'];
 $text = $_POST['text'];
 
 
@@ -16,12 +17,12 @@ $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 $mail->Username = 'vladislavosipenko584@gmail.com';                 // Наш логин
-$mail->Password = 'jdoplzdzsdvvdcan';                           // Наш пароль от ящика
+$mail->Password = 'aqxijmljmoaebtum';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('vladislavosipenko584@gmail.com', 'Partfolio');   // От кого письмо 
-$mail->addAddress('xobija1493@haboty.com');     // Add a recipient
+$mail->setFrom('vladislavosipenko584@gmail.com', 'Glopt');   // От кого письмо 
+$mail->addAddress('komoyi6648@3mkz.com');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -35,6 +36,7 @@ $mail->Body    = '
 		Пользователь оставил данные <br> 
 	Имя: ' . $name . ' <br>
 	E-mail: ' . $email . '<br>
+	Номер телефона: ' . $phone . '<br>
 	Текст: ' . $text . '';
 
 if(!$mail->send()) {
