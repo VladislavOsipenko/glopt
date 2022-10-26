@@ -1,60 +1,252 @@
 @media (max-width: 1200px)
     .container
-        max-width: 960px
-.promo
-    &_menu
-        &__item
-            font-size: 12px
-    &_numer
-        &__phone
-            font-size: 16px
-    &_information
-        grid-template-columns: repeat(4, 233px)
-.benefits
-    &_wrapper
-        grid-template-columns: repeat(2, 465px)
-    &_item
-        grid-template-columns: 65px 383px
-.work
-    &_wrapper
-        grid-template-columns: repeat(3, 300px)
-    &_item
-        &__img
-            img
-                width: 100%
-.agent
-    &_subtitle
-        font-size: 17px
-.price
-    &_wrapper
-        grid-template-columns: repeat(2, 265px)
-        justify-content: center
-        gap: 40px
-.meneger
-    &_descr
-        font-size: 17px
-.pageup
-    bottom: 20px
-    right: 20px
-    bottom: 25px
-    right: 25px
-.reviews
-    &_carousel
-        .slick-prev, .slick-next
-            left: 41%
-        .slick-next
-            left: auto
-            right: 41%
+        max-width: 960px  
+    .promo   
+        &_menu
+            &__item
+                font-size: 12px
+        &_numer
+            &__phone
+                font-size: 16px
+        &_information
+            grid-template-columns: repeat(4, 233px)
+    .benefits
+        &_wrapper
+            grid-template-columns: repeat(2, 465px)
+        &_item
+            grid-template-columns: 65px 383px
+    .work
+        &_wrapper
+            grid-template-columns: repeat(3, 300px)
+        &_item
+            &__img
+                img
+                    width: 100%
+    .agent
+        &_subtitle
+            font-size: 17px
+    .price
+        &_wrapper
+            grid-template-columns: repeat(2, 265px)
+            justify-content: center
+            gap: 40px
+    .meneger
+        &_descr
+            font-size: 17px
+    .pageup
+        bottom: 25px
+        right: 25px
+    .reviews
+        &_carousel
+            .slick-prev, .slick-next
+                left: 41%
+            .slick-next
+                left: auto
+                right: 41%
+    .hamburger
+        display: none
 
 @media (max-width: 992px)
     .container
         max-width: 720px
+    .promo
+        position: relative
+        &_wrapper
+            position: relative
+            justify-content: space-around
+        &_menu
+            position: fixed
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            top: 0
+            left: -100%
+            width: 50%
+            height: 100%
+            padding: 20px 15px
+            background-color: rgba(0,0,0, .8)
+            transition: 0.6s all
+            z-index: 2
+            &_active 
+                left: 0
+            &__item 
+                padding-right: 0
+                border: none
+                margin: 15px 0
+            &__link 
+                font-size: 20px
+        &_hamburger
+            display: block
+            position: absolute
+            right: 10px
+            top: 50%
+            transform: translateY(-50%)
+            width: 26px
+            height: 12px
+            span 
+                display: block 
+                height: 2px
+                width: 100%
+                background-color: #fff 
+                margin-bottom: 2px
+                transition: 0.5s all
+            &_active 
+                span 
+                    margin-bottom: -2px 
+                    &:nth-child(1)
+                        transform: translateY(3px) rotate(-45deg)
+                    &:nth-child(2)
+                        display: none
+                    &:nth-child(3)
+                            transform: translateY(3px) rotate(45deg)
+        &_numer
+            &__coll
+                text-align: center
+            &__phone
+                font-size: 17px
+        &_button1
+            margin-right: 25px
+        &_title
+            font-size: 55px
+        &__title
+            font-size: 22px
+        &_subtitle
+            font-size: 37px
+        &_line
+            width: 100%
+            &__first
+                width: 335px
+            &__second
+                width: 335px
+        &_information
+            grid-template-columns: repeat(2, 335px)
+    .benefits
+        &_wrapper
+            grid-template-columns: repeat(1, 525px)
+            justify-content: center
+            gap: 25px
+        &_item
+            justify-content: center
+    .work
+        &_wrapper
+            grid-template-columns: repeat(1, auto)
+        &_item
+            &__img
+                img
+                    display: block
+                    margin: 0 auto
+                    width: 85%
+    .price
+        &-form
+            padding: 0 15px
+            input
+                width: 210px
+    .scheme
+        &_wrapper2
+            width: 550px
+        &-item 
+            width: 160px
+    .reviews
+        &_carousel
+            .slick-prev, .slick-next
+                left: 39%
+            .slick-next
+                left: auto
+                right: 39%
+    .questions
+        &-form
+            &__input
+                padding: 0 15px
+                input
+                    width: 210px
+            &__textarea
+                padding: 0 15px
+    .footer
+        &_title 
+            padding-left: 15px
+        &_numer
+            &__phone
+                font-size: 13px
+        &_button
+            width: 140px
+    .pageup
+        bottom: 20px
+        right: 20px
+
+    
+
+
+        
+    
 
 
 
 @media (max-width: 768px)
     .container
         max-width: 540px
+    .promo
+        &__title
+            font-size: 19px
+        &_line
+            &__first
+                width: 240px
+            &__second
+                width: 240px
+        &_information
+            grid-template-columns: repeat(1, auto)
+        &_info
+            &__text
+                margin-top: 10px
+    .price
+        &-form
+            margin-top: 50px
+            width: 100%
+            flex-direction: column
+            padding-bottom: 35px
+            input
+                width: 270px
+                margin: 0 auto
+                margin-top: 10px
+    .questions
+        &-form
+            &__input
+                flex-direction: column
+                input
+                    width: 270px
+                    margin: 0 auto
+                    margin-top: 10px
+            &__btn
+                padding-bottom: 20px
+    .pageup
+        position: absolute
+    .footer
+        &_end
+            width: 315px
+        &_title
+            display: none
+        &_numer
+            &__coll
+                text-align: center
+    .reviews
+        &_carousel
+            &__inner
+                width: 550px
+            .slick-prev, .slick-next
+                left: 35%
+            .slick-next
+                left: auto
+                right: 35%
+    .scheme
+        &-item
+            width: 200px
+            margin: 0 auto
+            margin-top: 15px
+        &_wrapper
+            display: block
+        &_wrapper2
+            display: block
+            width: 100%
+        
 
 
 
@@ -62,3 +254,91 @@
     .container
         max-width: 100%
         padding: 0 10px
+    .promo
+        padding-bottom: 23px
+        &_menu
+            &__link
+                font-size: 16px
+        &_wrapper
+            display: block
+            text-align: center
+        &_numer
+            padding-top: 5px
+        &_button1
+            margin: 0 auto
+            margin-top: 5px
+        &_button
+            margin-top: 20px
+        &__title
+            margin-top: 115px
+            font-size: 18px
+        &_title
+            font-size: 39px
+        &_subtitle
+            font-size: 29px
+        &_line
+            margin-top: 20px
+        &_information
+            margin-top: 20px
+
+
+    .price
+        &_wrapper
+            grid-template-columns: repeat(1, 265px)
+            gap: 20px
+        &_subtitle
+            font-size: 18px
+    .meneger
+        &_descr
+            font-size: 14px
+        &_img
+            padding-top: 35px
+    .benefits
+        &_wrapper
+            grid-template-columns: repeat(1, 300px)
+        &_item
+            display: block
+            text-align: center
+    .agent
+        &_subtitle
+            font-size: 14px
+        &_img
+            img
+                padding-top: 35px
+    .reviews
+        &_subtitle
+            font-size: 18px
+        &_carousel
+            &__inner
+                width: 340px
+            .slick-prev, .slick-next
+                left: 23%
+            .slick-next
+                left: auto
+                right: 23%
+    .footer
+        &_button
+            width: 110px
+            font-size: 10px
+        &_line
+            margin-top: 20px
+        &_numer
+            padding-left: 20px
+            &__coll
+                font-size: 12px
+            &__phone
+                font-size: 11px
+        &_wrapper2
+            display: block
+        &_web
+            text-align: center
+        &_link
+            margin-top: 10px
+        &_dev
+            margin: 0 auto
+            margin-top: 15px
+    .work
+        &_subtitle
+            font-size: 18px
+    
+        

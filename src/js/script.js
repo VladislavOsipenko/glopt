@@ -14,7 +14,7 @@ $(document).ready(function(){
         {
             breakpoint: 768,
             settings: {
-            arrows: false,
+            arrows: true,
             centerMode: true,
             centerPadding: '40px',
             slidesToShow: 3
@@ -23,7 +23,7 @@ $(document).ready(function(){
         {
             breakpoint: 480,
             settings: {
-            arrows: false,
+            arrows: true,
             centerMode: true,
             centerPadding: '40px',
             slidesToShow: 1
@@ -95,5 +95,23 @@ $(document).ready(function(){
             } 
         });
     });
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const menu = document.querySelector('.promo_menu'),
+        menuItem = document.querySelectorAll('.promo_menu__item'),
+        hamburger = document.querySelector('.promo_hamburger');
+    
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('promo_hamburger_active');
+            menu.classList.toggle('promo_menu_active');
+        });
+    
+        menuItem.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.toggle('promo_hamburger_active');
+                menu.classList.toggle('promo_menu_active');
+            })
+        })
+    })
 }); 
 
